@@ -636,29 +636,51 @@ header .mega-menu .links li a i{
 .testimonials {
     padding: var(--sec-padding) 0;
     position: relative;
-    background-color: white;
+    background-color: var(--section-alt-background);
 }
 .testimonials .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
 }
 .testimonials .box {
-    
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgb(0 0 0/ 7%);
+    position: relative;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 .testimonials .box img {
-    
+    position: absolute;
+    right: -10px;
+    top: -50px;
+    width: 100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 10px solid var(--section-alt-background);
 }
 .testimonials .box h3 {
-    
+    margin: 0 0 10px;
 }
 .testimonials .box .title {
-    
+    display: block;
+    color: var(--main-color);
+    margin-bottom: 10px;
 }
 .testimonials .box .rate .filled{
-    
+    color: #ffc107;
 }
 .testimonials .box p {
-    
+    line-height: 1.5;
+    margin: 10px 0 0;
+    color: #;
 }
 /* End Testimonials */
 /* Start Animation */
