@@ -82,7 +82,7 @@ a {
 }
 .main-title:hover {
     color: white;
-    border: 1px solid white;
+    border: 2px solid transparent;
     transition-delay: .5s;
 }
 /* Small */
@@ -632,6 +632,35 @@ header .mega-menu .links li a i{
     color: white;
 }
 /* End Features */
+/* Start Testimonials */
+.testimonials {
+    padding: var(--sec-padding) 0;
+    position: relative;
+    background-color: white;
+}
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.testimonials .box {
+    
+}
+.testimonials .box img {
+    
+}
+.testimonials .box h3 {
+    
+}
+.testimonials .box .title {
+    
+}
+.testimonials .box .rate .filled{
+    
+}
+.testimonials .box p {
+    
+}
+/* End Testimonials */
 /* Start Animation */
 @keyframes up-and-down {
     0% , 100% {
