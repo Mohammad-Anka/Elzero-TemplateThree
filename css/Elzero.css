@@ -680,7 +680,7 @@ header .mega-menu .links li a i{
 .testimonials .box p {
     line-height: 1.5;
     margin: 10px 0 0;
-    color: #;
+    color: var(--main-color);
 }
 /* End Testimonials */
 /* Start Animation */
