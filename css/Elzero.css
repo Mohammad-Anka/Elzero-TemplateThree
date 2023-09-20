@@ -882,7 +882,7 @@ header .mega-menu .links li a i{
     background-color: var(--main-color);
     color: white;
     height: 100%;
-    width: 60px;
+    width: 80px;
     font-size: 30px;
     font-weight: bold;
     display: flex;
@@ -895,7 +895,7 @@ header .mega-menu .links li a i{
     position: absolute;
     background-color: #d5d5d5;
     top: 0;
-    left: 60px;
+    left: 80px;
     width: 50px;
     height: calc(100% + 0.4px);
     transform: skewX(-30deg);
