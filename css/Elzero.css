@@ -84,6 +84,34 @@ a {
   border: 2px solid transparent;
   transition-delay: 0.5s;
 }
+.spikes {
+  position: relative;
+}
+.spikes::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg , white 25% ,transparent 25%);
+  background-size: 30px 30px;
+}
+.dots {
+  background-image: url(../imgs/dots.png);
+  height: 186px;
+  width: 204px;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.dots-up {
+  top: 200px;
+  right: 0;
+}
+.dots-down {
+  bottom: 200px;
+  left: 0;
+}
 /* Small */
 @media (min-width: 768px) {
   .container {
@@ -1136,7 +1164,7 @@ header .mega-menu .links li a i {
   display: flex;
   gap: 20px;
 }
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .events .subscribe form {
     max-width: 100%;
     padding: 20px;
@@ -1159,7 +1187,7 @@ header .mega-menu .links li a i {
   flex: 1;
   caret-color: var(--main-color);
 }
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .events .subscribe form input[type="email"] {
     border-radius: 0;
     -webkit-border-radius: work0;
@@ -1199,7 +1227,7 @@ header .mega-menu .links li a i {
   -ms-transition: var(--transition-val);
   -o-transition: var(--transition-val);
 }
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .events .subscribe form input[type="submit"] {
     border-radius: 0;
     -webkit-border-radius: 0;
@@ -1261,10 +1289,10 @@ header .mega-menu .links li a i {
   bottom: 0;
 }
 .pricing .box:hover::before,
-.pricing .box:hover::after { 
+.pricing .box:hover::after {
   width: 100%;
 }
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   .pricing .box.popular {
     top: -20px;
   }
@@ -1282,7 +1310,7 @@ header .mega-menu .links li a i {
   right: 20px;
   width: 40px;
 }
-.pricing .box.popular .label::before{
+.pricing .box.popular .label::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1363,7 +1391,7 @@ header .mega-menu .links li a i {
   background-color: var(--section-alt-background);
   border: 1px solid #ddd;
 }
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .videos .holder {
     flex-direction: column;
   }
@@ -1439,7 +1467,7 @@ header .mega-menu .links li a i {
   margin: 0 auto 50px;
   position: relative;
 }
-.stats .container{
+.stats .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
@@ -1449,7 +1477,7 @@ header .mega-menu .links li a i {
   padding: 30px 15px;
   text-align: center;
   position: relative;
-  opacity: .8;
+  opacity: 0.8;
   transition: var(--transition-val);
   -webkit-transition: var(--transition-val);
   -moz-transition: var(--transition-val);
@@ -1524,9 +1552,9 @@ header .mega-menu .links li a i {
   width: 100%;
   height: 100%;
   background-color: rgb(23 135 224 / 97%);
-  z-index: -1 ;
+  z-index: -1;
 }
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .discount .image {
     flex-basis: 100%;
   }
@@ -1536,8 +1564,9 @@ header .mega-menu .links li a i {
   align-items: center;
   justify-content: center;
   flex-basis: 50%;
+  padding-bottom: 40px;
 }
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .discount .form {
     flex-basis: 100%;
   }
@@ -1596,6 +1625,138 @@ header .mega-menu .links li a i {
   max-width: 100%;
 }
 /* End Discount */
+/* Start Footer */
+.footer {
+  background-color: #191919;
+  padding: 70px 0 0;
+}
+@media (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+.footer .box h3 {
+  color: white;
+  font-size: 50px;
+  margin: 0 0 20px;
+}
+.footer .box .social {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .footer .box .social {
+    justify-content: center;
+  }
+}
+.footer .box .social li {
+  margin-right: 10px;
+}
+.footer .box .social li a {
+  background-color: #313131;
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  transition: var(--transition-val);
+  -webkit-transition: var(--transition-val);
+  -moz-transition: var(--transition-val);
+  -ms-transition: var(--transition-val);
+  -o-transition: var(--transition-val);
+}
+.footer .box .social .facebook:hover {
+  background-color: #1877f2;
+}
+.footer .box .social .twitter:hover {
+  background-color: #1da1f2;
+}
+.footer .box .social .youtube:hover {
+  background-color: #ff0000;
+}
+.footer .box .text {
+  line-height: 2;
+  color: #b9b9b9;
+}
+.footer .box .links li {
+  padding: 15px 0;
+  transition: var(--transition-val);
+  -webkit-transition: var(--transition-val);
+  -moz-transition: var(--transition-val);
+  -ms-transition: var(--transition-val);
+  -o-transition: var(--transition-val);
+}
+.footer .box .links li:not(:last-child) {
+  border-bottom: 1px solid #444;
+}
+.footer .box .links li:hover {
+  padding-left: 10px;
+}
+.footer .box .links li:hover a {
+  color: white;
+}
+.footer .box .links li a {
+  color: #b9b9b9;
+  transition: var(--transition-val);
+  -webkit-transition: var(--transition-val);
+  -moz-transition: var(--transition-val);
+  -ms-transition: var(--transition-val);
+  -o-transition: var(--transition-val);
+}
+.footer .box .links li a::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\F101";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--main-color);
+}
+.footer .box .line {
+  display: flex;
+  align-items: center;
+  color: #b9b9b9;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .footer .box .line {
+    flex-direction: column;
+  }
+}
+.footer .box .line i {
+  font-size: 25px;
+  color: var(--main-color);
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .footer .box .line i {
+    margin: 0 0 10px;
+  }
+}
+.footer .box .line .info {
+  line-height: 1.8;
+  flex: 1;
+}
+.footer .box .line .info span {
+  display: block;
+}
+.footer .footer-gallery img {
+  width: 78px;
+  border: 3px solid white;
+  margin: 2px;
+}
+.footer .copyright {
+  padding: 25px 0;
+  text-align: center;
+  color: white;
+  margin: 5px 0 0;
+  border-top: 1px solid #444;
+}
+/* End Footer */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
@@ -1691,7 +1852,8 @@ header .mega-menu .links li a i {
   }
 }
 @keyframes change-background {
-  0% , 100% {
+  0%,
+  100% {
     background-image: url("../imgs/discount-background1.jpg");
   }
   50% {
